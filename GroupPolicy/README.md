@@ -22,9 +22,9 @@ Note: This is a roadmap and does not list the GPOs currently avaliable.
 
 ### POLICY-Domain
 
-### POLICY-DC-Audit
-
 ### POLICY-DC
+
+### POLICY-DC-Audit
 
 ### POLICY-Client-Experience-Computer
 
@@ -32,41 +32,29 @@ Note: This is a roadmap and does not list the GPOs currently avaliable.
 
 ### POLICY-Client-Experience-EngineerQFE
 
-### POLICY-Client-Pilot
-
 ### POLICY-Client-Maintenance
+
+### POLICY-Client-Office
 
 ### POLICY-Client-Antivirus
 
 ### POLICY-Client-Security-Audit
 
-### POLICY-Client-Security-Baseline-Computer
+### POLICY-Client-Security-Computer
 
-### POLICY-Client-Security-Baseline-User
+### POLICY-Client-Security-User
 
-### POLICY-Client-Security-Baseline-EngineerQFE
+### POLICY-Client-Security-EngineerQFE
+
+### POLICY-Client-Security-Office
 
 ### POLICY-Client-LAPS
-
-### POLICY-PAW-Tier0-Computer
-
-### POLICY-PAW-Tier0-User
-
-### POLICY-PAW-Tier1-Computer
-
-### POLICY-PAW-Tier1-User
-
-### POLICY-PAW-Tier2-Computer
-
-### POLICY-PAW-Tier2-User
 
 ### POLICY-Browser-EdgeIE
 
 ### POLICY-Browser-ChromeFirefox
 
 ### POLICY-Server-Experience
-
-### POLICY-Server-Pilot
 
 ### POLICY-Server-Maintenance
 
@@ -83,3 +71,13 @@ Note: This is a roadmap and does not list the GPOs currently avaliable.
 ### POLICY-Server-Security-Tier2
 
 ### POLICY-Server-LAPS
+
+### POLICY-Pilot-Server
+
+### POLICY-Pilot-Client
+
+### POLICY-PAW-Tier0
+
+### POLICY-PAW-Tier1
+
+### POLICY-PAW-Tier2
