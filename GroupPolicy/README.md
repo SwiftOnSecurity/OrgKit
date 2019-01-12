@@ -50,6 +50,8 @@ Note: This is a roadmap and does not list the GPOs currently avaliable.
 
 ### POLICY-Client-LAPS
 
+### POLICY-Client-WSUS
+
 ### POLICY-Browser-EdgeIE
 
 ### POLICY-Browser-ChromeFirefox
@@ -72,6 +74,8 @@ Note: This is a roadmap and does not list the GPOs currently avaliable.
 
 ### POLICY-Server-LAPS
 
+### POLICY-Server-WSUS
+
 ### POLICY-Pilot-Server
 
 ### POLICY-Pilot-Client
@@ -81,3 +85,5 @@ Note: This is a roadmap and does not list the GPOs currently avaliable.
 ### POLICY-PAW-Tier1
 
 ### POLICY-PAW-Tier2
+
+
