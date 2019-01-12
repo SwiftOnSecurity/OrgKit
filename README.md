@@ -15,3 +15,7 @@ Strictly, Powershell DSC is the correct tool to build and maintain a Windows env
 Powershell DSC is currently a specialized skill designed to revert anything done outside its central control. It requires whole-organization buy-in, and for that reason, the kind of use-cases for this set of guidance cannot rely on it.
 
 ### Group Policy
+
+## Project operations
+None of this project is sold as unique work or groundbreaking. Where possible, it will reference the existing work of others, or heavily credit them in adaptation - with their permission.
+Many IT organizations have a set of capabilities similar to this. They press a button and can build an entire company, just like this. However, it is properitary work product their staff cannot publicly share. This is intended to remediate that.
