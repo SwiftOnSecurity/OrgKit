@@ -36,6 +36,8 @@ Note: This is a roadmap and does not list the GPOs currently avaliable.
 
 ### POLICY-Client-Maintenance
 
+### POLICY-Client-Antivirus
+
 ### POLICY-Client-Security-Audit
 
 ### POLICY-Client-Security-Baseline-Computer
@@ -67,6 +69,8 @@ Note: This is a roadmap and does not list the GPOs currently avaliable.
 ### POLICY-Server-Pilot
 
 ### POLICY-Server-Maintenance
+
+### POLICY-Server-Antivirus
 
 ### POLICY-Server-Security-Audit
 
