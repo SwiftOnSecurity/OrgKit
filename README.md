@@ -2,7 +2,7 @@
 Provision a brand-new company with proper defaults in Windows, Office365, and Azure.
 
 ## Mission
-OrgKit is designed to provide a series of templates to "boot-up" a new highly-documented IT environment for a mid-size organization, serve as a public example of what's possible, and allow informed decisions about this.
+OrgKit is designed to provide a series of templates to "boot-up" a new highly-documented IT environment for a mid-size organization, serve as a public example of what's possible, be a gold-standard implementation, and allow informed decisions by companies who do not know what's really done by other businesses.
 
 The specific target is a company having to start-over after a complete network compromise, or the spin-up of a new subsidiary business.
 
