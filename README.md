@@ -6,6 +6,17 @@ OrgKit is designed to provide a series of templates to "boot-up" a new highly-do
 
 The specific target is a company having to start-over after a complete network compromise, or the spin-up of a new subsidiary business.
 
+## Preliminary sources
+If you want to jump ahead, here's some of the work I will be citing in addition to my own, and which you can go ahead and use yourself
+
+- [Center for Internet Security](https://www.cisecurity.org/) baselines
+- [PAW](https://github.com/unassassinable/PAW) by [Rich "unassassinable"](https://github.com/unassassinable)
+- [win10-secure-baseline-gpo](https://github.com/mxk/win10-secure-baseline-gpo) by [Maxim Khitrov "mxk"](https://github.com/mxk)
+- [Win10-Initial-Setup-Script](https://github.com/Disassembler0/Win10-Initial-Setup-Script) by ["Disassembler0"](https://github.com/Disassembler0)
+- [awesome-windows-domain-hardening](https://github.com/PaulSec/awesome-windows-domain-hardening) by ["PaulSec"](https://github.com/PaulSec)
+- [Windows-Secure-Host-Baseline](https://github.com/nsacyber/Windows-Secure-Host-Baseline) by [The NSA](https://github.com/nsacyber)
+- [windows-event-forwarding](https://github.com/palantir/windows-event-forwarding) by [Palantir](https://github.com/palantir)
+
 ## Design decisions
 It's important to note that the reason a comprehensive repository of Microsoft product configuration guidance for organizations is so rare is because the entire ecosystem is designed to be customized per-organization. However, most organizations are not equipped nor understand the breadth of what this really means. This divergent configuration history of their customers, along with fears about having to support it, then prevents Microsoft providing strong defaults and guidance in a generic form.
 
