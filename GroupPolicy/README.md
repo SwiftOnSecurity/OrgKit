@@ -48,17 +48,17 @@ Note: This is a roadmap and does not list the GPOs currently avaliable.
 
 ### POLICY-Client-LAPS
 
-### POLICY-Client-PAW-Tier0-Computer
+### POLICY-PAW-Tier0-Computer
 
-### POLICY-Client-PAW-Tier0-User
+### POLICY-PAW-Tier0-User
 
-### POLICY-Client-PAW-Tier1-Computer
+### POLICY-PAW-Tier1-Computer
 
-### POLICY-Client-PAW-Tier1-User
+### POLICY-PAW-Tier1-User
 
-### POLICY-Client-PAW-Tier2-Computer
+### POLICY-PAW-Tier2-Computer
 
-### POLICY-Client-PAW-Tier2-User
+### POLICY-PAW-Tier2-User
 
 ### POLICY-Browser-EdgeIE
 
