@@ -17,6 +17,8 @@ With the (general) separation of User and Computer policies, this design leaves 
 
 This will likely be simplified but for now it's a provisional roadmap.
 
+Every Group Policy where it's possible to include a note, includes a unique identifier. This allows you to quickly identify a policy and its current recommended status.
+
 ## Policies
 Note: This is a roadmap and does not list the GPOs currently avaliable.
 
