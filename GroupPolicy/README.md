@@ -13,42 +13,60 @@ You will need to review and then assign each Group Policy to the appropriate OUs
 Certain GPOs may require additional customization for them to function in your environment. For example, you may need to put in your Office365 Tenant GUID for certain OneDrive restrictions to be properly assigned.
 
 ## Design notes
-With the (general) separation of User and Computer policies, this design leaves open the option for Group Policy Loopback Processing in training lab environments.
+This design goes against common advice to limit Group Policy Object numbers as much as possible. There is a large risk here as administrators may not understand the complex interplay of precedence and the full end-result of their selections.
+However, this is based on my personal preference in maintaining a domain with logical separation of settings. This allows categories to be not applied to testing machines. This is to increase long-term operational flexibility and testing abilities.
 
-This will likely be simplified but for now it's a provisional roadmap.
+With the (general) separation of User and Computer policies, this design leaves open the option for Group Policy Loopback Processing in training lab environments.
 
 Every Group Policy where it's possible to include a note, includes a unique identifier. This allows you to quickly identify a policy and its current recommended status.
 
 ## Policies
-Note: This is a roadmap and does not list the GPOs currently avaliable.
+Note: This is a roadmap vision and does not list the GPOs currently avaliable.
 
 ### POLICY-Domain
+A limited set of domain-wide settings which are required for all machines. Things such as enabling a minimum protocol negotiation level.
 
-### POLICY-DC
+### POLICY-DomainControllers
+Domain Controllers security settings and configuration for communicating with clients.
 
-### POLICY-DC-Audit
+### POLICY-DomainControllers-Pilot
+Domain Controllers policy which will be applied to a subset of domain controllers first, for incremental testing.
 
-### POLICY-Client-Experience-Computer
+### POLICY-DomainControllers-Auditing
+Directory Controller-specific Active Directory, system integrity auditing settings, and log forwarding, which are much more stringent than on a normal server or client PC.
 
-### POLICY-Client-Experience-User
+### POLICY-Client-Auditing
+Applied to the Domain Computers OU to configure audit settings and log forwarding.
 
-### POLICY-Client-Experience-EngineerQFE
+### POLICY-Client-Computer
+Applied to the Domain Computers OU, does not include user-level policies.
+
+### POLICY-Client-Computer-Security
+Applied to the Domain Computers OU, does not include user-level policies.
+
+### POLICY-Client-User
+Applied to the Domain Users OU, does not include computer-level policies.
+
+### POLICY-Client-User-Security
+Applied to the Domain Users OU, does not include computer-level policies.
+
+### POLICY-Client-EngineerQFE
+Applied to the 'Domain Users' and 'Domain Computer' OU. Allows designated Helpdesk Engineers to add new "quick-fix engineering" changes to Group Policy, without having the power to edit the primary policies, which have final engineering control by Windows System Engineers.
 
 ### POLICY-Client-Maintenance
+Settings which configure maintenance tasks and run periodic tasks on client machines to maintain them.
 
 ### POLICY-Client-Office
+User experience settings for Office.
 
-### POLICY-Client-Antivirus
+### POLICY-Client-Office-Security
+Security settings for Office.
+
+### POLICY-Client-AntivirusDefender
+Settings for Windows Defender on the client. This should not be disabled, even if a different antivirus is installed. If needed, Defender will be automatically disabled on the systems. Defender should never be administratively disabled.
 
 ### POLICY-Client-Security-Audit
 
-### POLICY-Client-Security-Computer
-
-### POLICY-Client-Security-User
-
-### POLICY-Client-Security-EngineerQFE
-
-### POLICY-Client-Security-Office
 
 ### POLICY-Client-LAPS
 
