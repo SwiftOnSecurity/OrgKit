@@ -21,7 +21,7 @@ If you want to jump ahead, here's some of the work I will be citing in addition 
 It's important to note that the reason a comprehensive repository of Microsoft product configuration guidance for organizations is so rare is because the entire ecosystem is designed to be customized per-organization. However, most organizations are not equipped nor understand the breadth of what this really means. This divergent configuration history of their customers, along with fears about having to support it, then prevents Microsoft providing strong defaults and guidance in a generic form.
 
 ### Powershell DSC
-Strictly, Powershell DSC is the correct tool to build and maintain a Windows environment with this level of centralized design and vision. It is a great set of abilities, and it will likely be included in the future. However, this project is aimed at Windows administrators who will already be intidated by the breadth of new technologies and concepts, and need to run the system over a long-term with other staff.
+Strictly, Powershell DSC is the correct tool to build and maintain a Windows environment with this level of centralized design and vision. It is a great set of abilities, and it will likely be included in the future. However, this project is aimed at Windows administrators who will already be intimidated by the breadth of new technologies and concepts, and need to run the system over a long-term with other staff.
 
 Powershell DSC is currently a specialized skill designed to revert anything done outside its central control. It requires whole-organization buy-in, and for that reason, the kind of use-cases for this set of guidance cannot rely on it.
 
@@ -29,4 +29,4 @@ Powershell DSC is currently a specialized skill designed to revert anything done
 
 ## Project operations
 None of this project is sold as unique work or groundbreaking. Where possible, it will reference the existing work of others, or heavily credit them in adaptation - with their permission.
-Many IT organizations have a set of capabilities similar to this. They press a button and can build an entire company, just like this. However, it is properitary work product their staff cannot publicly share. This is intended to remediate that.
+Many IT organizations have a set of capabilities similar to this. They press a button and can build an entire company, just like this. However, it is proprietary work product their staff cannot publicly share. This is intended to remediate that.
