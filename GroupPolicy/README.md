@@ -1,6 +1,10 @@
 
 # OrgKit - Group Policy
-This is a set of logically grouped Group Policy Objects designed for import into Active Directory.
+This is a set of logically grouped Group Policy Objects designed for import into Active Directory. This policies can be used on existing infrastruture, but they are designed for use during the initial deployment of domain infrastructure.
+
+> Security policies are progressive and may block access to aging or misconfigured network devices like SAN or NAS appliances. Please understand the individual security settings before using them.
+
+****
 
 ## Purpose
 As Windows and networks have changed, some best-practices in Group Policy design have changed or been relaxed. Based on experience in running Group Policy in operation, in this set there is greater-than-required separation of policies, to allow more targetted troubleshooting and future customization.
@@ -14,11 +18,11 @@ Certain GPOs may require additional customization for them to function in your e
 
 ## Design notes
 This design goes against common advice to limit Group Policy Object numbers as much as possible. There is a large risk here as administrators may not understand the complex interplay of precedence and the full end-result of their selections.
-However, this is based on my personal preference in maintaining a domain with logical separation of settings. This allows categories to be not applied to testing machines. This is to increase long-term operational flexibility and testing abilities.
+However, this is based on my personal preference in maintaining a domain with logical separation of settings. This allows categories to be not applied to testing machines or limit the scope of change approvals. This is to increase long-term operational flexibility and testing abilities.
 
 With the (general) separation of User and Computer policies, this design leaves open the option for Group Policy Loopback Processing in training lab environments.
 
-Every Group Policy where it's possible to include a note, includes a unique identifier. This allows you to quickly identify a policy and its current recommended status.
+Most policy comments will include a unique identifier called 'OrgKitID'. This allows you to quickly identify a policy and its current recommended status via web search.
 
 ## Policies
 Note: This is a roadmap vision and does not list the GPOs currently avaliable.
@@ -66,15 +70,20 @@ Security settings for Office.
 Settings for Windows Defender on the client. This should not be disabled, even if a different antivirus is installed. If needed, Defender will be automatically disabled on the systems. Defender should never be administratively disabled.
 
 ### POLICY-Client-Security-Audit
-
+Windows audit security settings.
 
 ### POLICY-Client-LAPS
+Controls 'Microsoft Local Administrator Password Solution' deployed to client machines
+https://technet.microsoft.com/en-us/mt227395.aspx
+https://www.starwindsoftware.com/blog/deploying-microsoft-laps
 
 ### POLICY-Client-WSUS
 
 ### POLICY-Browser-EdgeIE
+Settings for Edge and Internet Explorer.
 
 ### POLICY-Browser-ChromeFirefox
+Settings for Chrome and Firefox.
 
 ### POLICY-Server-Experience
 
@@ -82,9 +91,9 @@ Settings for Windows Defender on the client. This should not be disabled, even i
 
 ### POLICY-Server-Antivirus
 
-### POLICY-Server-Security-Audit
+### POLICY-Server-Audit
 
-### POLICY-Server-Security-Baseline
+### POLICY-Server-Security
 
 ### POLICY-Server-Security-Tier0
 
