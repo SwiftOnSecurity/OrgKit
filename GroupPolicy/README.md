@@ -7,9 +7,11 @@ This is a set of logically grouped Group Policy Objects designed for import into
 ****
 
 ## Purpose
-As Windows and networks have changed, some best-practices in Group Policy design have changed or been relaxed. Based on experience in running Group Policy in operation, in this set there is greater-than-required separation of policies, to allow more targetted troubleshooting and future customization.
+With over 12000 individual policies to select from and innumerable ways to approach the task, fully implementing a managed environment with Group Policy can be a large undertaking.
 
-Additionally, there exists expansion abilities for Desktop Engineers to insert temporary shims, without having ability to edit the main GPO, or impacting priviledged desktops.
+For this reason, every company's configuration becomes bespoke, based on administrator preferences, and only fully supportable by them. There is no durable, comprehensive public baseline of Group Policy. Although considerably aging compared to modern management tools, there remains no reasonable and supportable replacement for this technology, and it's indispensible to the durable network.
+
+Group Policy's incredible power also means most organizations have admins who are afraid to, or prevented from, fully exploring and utilizing it. OrgKit's mission is to be a referenable public proof of a highly-detailed implementation, rather than a listing of best-practices and what-ifs.
 
 ## Implementation
 You will need to review and then assign each Group Policy to the appropriate OUs yourself.
