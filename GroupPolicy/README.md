@@ -74,11 +74,6 @@ Settings for Windows Defender on the client. This should not be disabled, even i
 ### POLICY-Client-Security-Audit
 Windows audit security settings.
 
-### POLICY-Client-LAPS
-Controls 'Microsoft Local Administrator Password Solution' deployed to client machines
-https://technet.microsoft.com/en-us/mt227395.aspx
-https://www.starwindsoftware.com/blog/deploying-microsoft-laps
-
 ### POLICY-Client-WSUS
 
 ### POLICY-Browser-EdgeIE
@@ -92,6 +87,7 @@ Settings for Chrome and Firefox.
 ### POLICY-Server-Maintenance
 
 ### POLICY-Server-Antivirus
+Servers may need specialized antivirus settings due to performance concerns and troubleshooting, so this policy is separated out.
 
 ### POLICY-Server-Audit
 
@@ -102,8 +98,6 @@ Settings for Chrome and Firefox.
 ### POLICY-Server-Security-Tier1
 
 ### POLICY-Server-Security-Tier2
-
-### POLICY-Server-LAPS
 
 ### POLICY-Server-WSUS
 
@@ -117,4 +111,7 @@ Settings for Chrome and Firefox.
 
 ### POLICY-PAW-Tier2
 
-
+### POLICY-LAPS
+Controls 'Microsoft Local Administrator Password Solution' deployed to client machines
+https://technet.microsoft.com/en-us/mt227395.aspx
+https://www.starwindsoftware.com/blog/deploying-microsoft-laps
