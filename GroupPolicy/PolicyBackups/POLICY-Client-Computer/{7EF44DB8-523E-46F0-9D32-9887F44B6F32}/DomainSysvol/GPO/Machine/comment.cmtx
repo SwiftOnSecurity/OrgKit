@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<policyComments xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/CommentDefinitions">
+  <policyNamespaces>
+    <using prefix="ns0" namespace="FullArmor.Policies.3B9EA2B5_A1D1_4CD5_9EDE_75B22990BC21"></using>
+    <using prefix="ns1" namespace="Microsoft.Policies.CloudContent"></using>
+  </policyNamespaces>
+  <comments>
+    <admTemplate>
+      <comment policyRef="ns0:DisableWebSearch" commentText="$(resource.ns0_DisableWebSearch)"></comment>
+      <comment policyRef="ns0:DoNotUseWebResults" commentText="$(resource.ns0_DoNotUseWebResults)"></comment>
+      <comment policyRef="ns0:SearchPrivacy" commentText="$(resource.ns0_SearchPrivacy)"></comment>
+      <comment policyRef="ns1:DisableWindowsConsumerFeatures" commentText="$(resource.ns1_DisableWindowsConsumerFeatures)"></comment>
+    </admTemplate>
+  </comments>
+  <resources minRequiredRevision="1.0">
+    <stringTable>
+      <string id="ns0_DisableWebSearch">Ensure searches do not get sent to Bing. Legacy setting assurance.
+Sets RegKey "ConnectedSearchUseWeb" to 0.
+
+OrgKitGpoSetting: Enabled
+PolicyID: DisableWebSearch
+OrgKitID: 8f04d726-97e3-4233-b51a-eba6726b8274</string>
+      <string id="ns0_DoNotUseWebResults">Ensure searches in Windows 10 Start Menu do not get sent to Bing.
+Controls RegValue "ConnectedSearchUseWeb"
+
+OrgKitGpoSetting: Enabled
+PolicyID: DoNotUseWebResults
+OrgKitID: 0494c7f1-ddd2-4fcb-87fa-2c98ea0197b6</string>
+      <string id="ns0_SearchPrivacy">If Bing search somehow gets turned back on, ensure sensitive user data not sent to Bing. This is a defense-in-depth setting.
+
+Documentation: &lt;&lt; https://www.ghacks.net/2015/06/23/how-to-disable-web-search-in-windows-10s-start-menu/ &gt;&gt;</string>
+      <string id="ns1_DisableWindowsConsumerFeatures">OrgKitId: 8965912b-b199-4c1d-bf6a-e4d4cbcd2f5f
+</string>
+    </stringTable>
+  </resources>
+</policyComments>
