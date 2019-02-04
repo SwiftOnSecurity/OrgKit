@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<policyComments xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/CommentDefinitions">
+  <policyNamespaces>
+    <using prefix="ns0" namespace="Microsoft.Policies.InternetExplorer"></using>
+  </policyNamespaces>
+  <comments>
+    <admTemplate>
+      <comment policyRef="ns0:AddonManagement_AddOnList" commentText="$(resource.ns0_AddonManagement_AddOnList)"></comment>
+      <comment policyRef="ns0:EnterpriseModeEnable" commentText="$(resource.ns0_EnterpriseModeEnable)"></comment>
+      <comment policyRef="ns0:TurnOffAccelerators" commentText="$(resource.ns0_TurnOffAccelerators)"></comment>
+      <comment policyRef="ns0:VerMgmtDisableRunThisTime" commentText="$(resource.ns0_VerMgmtDisableRunThisTime)"></comment>
+    </admTemplate>
+  </comments>
+  <resources minRequiredRevision="1.0">
+    <stringTable>
+      <string id="ns0_AddonManagement_AddOnList">Disable add-ons with known issues in Internet Explorer, or unwanted add-ons.
+
+Canon {3785D0AD-BFFF-47F6-BF5B-A587C162FED9}
+Canon {759D9886-0C6F-4498-BAB6-4A5F47C6C72F}
+Logitech SetPoint {AF949550-9094-4807-95EC-D1C317803333}
+HP Smart {FFFFFFFF-CF4E-4F2B-BDC2-0E72E116A856}
+HP Print Enhancer {0347C33E-8762-4905-BF09-768834316C61}
+HP Smart Web Printing {DDE87865-83C5-48c4-8357-2F5B1AA84522}</string>
+      <string id="ns0_EnterpriseModeEnable">Enterprise Mode is a strong compatibility feature that may prevent needing to turn off other security features.
+</string>
+      <string id="ns0_TurnOffAccelerators">Accelerators are an abandoned IE feature.</string>
+      <string id="ns0_VerMgmtDisableRunThisTime">Ensure add-ons like Java which are outdated are not run by the user. Add the site to the Domain Allow List if this is required.</string>
+    </stringTable>
+  </resources>
+</policyComments>

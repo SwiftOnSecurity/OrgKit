@@ -18,6 +18,8 @@ You will need to review and then assign each Group Policy to the appropriate OUs
 
 Certain GPOs may require additional customization for them to function in your environment. For example, you may need to put in your Office365 Tenant GUID for certain OneDrive restrictions to be properly assigned.
 
+[Do not edit the default Group Policies](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc779159(v=ws.10))
+
 ## Design notes
 This design goes against common advice to limit Group Policy Object numbers as much as possible. There is a large risk here as administrators may not understand the complex interplay of precedence and the full end-result of their selections.
 However, this is based on my personal preference in maintaining a domain with logical separation of settings. This allows categories to be not applied to testing machines or limit the scope of change approvals. Change processes in large organizations inform many decisions about the heavy segmentation of policies between many Group Policy Objects.

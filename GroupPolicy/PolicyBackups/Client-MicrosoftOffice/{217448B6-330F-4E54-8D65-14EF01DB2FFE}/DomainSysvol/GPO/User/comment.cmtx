@@ -1,0 +1,69 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<policyComments xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/CommentDefinitions">
+  <policyNamespaces>
+    <using prefix="ns0" namespace="access16.Office.Microsoft.Policies.Windows"></using>
+    <using prefix="ns1" namespace="excel16.Office.Microsoft.Policies.Windows"></using>
+    <using prefix="ns2" namespace="office16.Office.Microsoft.Policies.Windows"></using>
+    <using prefix="ns3" namespace="outlk16.Office.Microsoft.Policies.Windows"></using>
+    <using prefix="ns4" namespace="ppt16.Office.Microsoft.Policies.Windows"></using>
+    <using prefix="ns5" namespace="word16.Office.Microsoft.Policies.Windows"></using>
+  </policyNamespaces>
+  <comments>
+    <admTemplate>
+      <comment policyRef="ns0:L_ListOfManagedAddins" commentText="$(resource.ns0_L_ListOfManagedAddins)"></comment>
+      <comment policyRef="ns1:L_ListOfManagedAddins" commentText="$(resource.ns1_L_ListOfManagedAddins)"></comment>
+      <comment policyRef="ns2:L_SignInOptions" commentText="$(resource.ns2_L_SignInOptions)"></comment>
+      <comment policyRef="ns3:L_AuthenticationwithExchangeServer" commentText="$(resource.ns3_L_AuthenticationwithExchangeServer)"></comment>
+      <comment policyRef="ns3:L_AutomaticallyConfigureProfileBasedOnActiveOnce" commentText="$(resource.ns3_L_AutomaticallyConfigureProfileBasedOnActiveOnce)"></comment>
+      <comment policyRef="ns3:L_EnableRPCEncryption" commentText="$(resource.ns3_L_EnableRPCEncryption)"></comment>
+      <comment policyRef="ns3:L_ListOfManagedAddins" commentText="$(resource.ns3_L_ListOfManagedAddins)"></comment>
+      <comment policyRef="ns3:L_RPCHTTPConnectionFlags" commentText="$(resource.ns3_L_RPCHTTPConnectionFlags)"></comment>
+      <comment policyRef="ns3:L_StationeryFonts" commentText="$(resource.ns3_L_StationeryFonts)"></comment>
+      <comment policyRef="ns4:L_ListOfManagedAddins" commentText="$(resource.ns4_L_ListOfManagedAddins)"></comment>
+      <comment policyRef="ns5:L_ListOfManagedAddins" commentText="$(resource.ns5_L_ListOfManagedAddins)"></comment>
+    </admTemplate>
+  </comments>
+  <resources minRequiredRevision="1.0">
+    <stringTable>
+      <string id="ns0_L_ListOfManagedAddins">Disables a list of potentially problematic add-ins due to privacy or performance issues.
+
+Default list from OrgKit:
+- btmoffice.Connect</string>
+      <string id="ns1_L_ListOfManagedAddins">Disables a list of potentially problematic add-ins due to privacy or performance issues.
+
+Default list from OrgKit:
+-btmoffice.Connect</string>
+      <string id="ns2_L_SignInOptions">Ensure users do not sign in to Microsoft accounts for OneDrive.</string>
+      <string id="ns3_L_AuthenticationwithExchangeServer">Do not configure this setting.
+
+Documentation: &lt;&lt;https://support.microsoft.com/en-us/help/2975918/office-365-credential-prompts-with-authenticationservice-registry-valu&gt;&gt;</string>
+      <string id="ns3_L_AutomaticallyConfigureProfileBasedOnActiveOnce">Enable subsequent custom Outlook profiles to use custom settings if the user desires. It will still offer the user the default SMTP address by default.</string>
+      <string id="ns3_L_EnableRPCEncryption">Enforce encrypted communications with email server.</string>
+      <string id="ns3_L_ListOfManagedAddins">Disables a list of potentially problematic add-ins due to privacy or performance issues.
+
+Default list from OrgKit:
+- ColleagueImport.ColleagueImportAddin
+- TeamViewerMeetingAddIn.AddIn
+- btmoffice.Connect
+- Apple.DAV.Addin
+- OutlookChangeNotifier.Connect
+- GrammarlyAddIn.Connect
+- BtOfficeAddin.BtOfficeIntegration.1
+- PDFescapeDesktopOutLookPlugIn.Connect
+- LinkPointOutlookAddin.AddinModule
+- iTunesAddIn.CalendarHelper</string>
+      <string id="ns3_L_RPCHTTPConnectionFlags">Force-enable all Outlook Anywhere options
+
+Documentation: &lt;&lt;https://www.howto-outlook.com/howto/outlookanywherefastslow.htm&gt;&gt;</string>
+      <string id="ns3_L_StationeryFonts">Ensure customer email format does not override user default format in email threads.</string>
+      <string id="ns4_L_ListOfManagedAddins">Disables a list of potentially problematic add-ins due to privacy or performance issues.
+
+Default list from OrgKit:
+- btmoffice.Connect</string>
+      <string id="ns5_L_ListOfManagedAddins">Disables a list of potentially problematic add-ins due to privacy or performance issues.
+
+Default list from OrgKit:
+- btmoffice.Connect</string>
+    </stringTable>
+  </resources>
+</policyComments>

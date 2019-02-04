@@ -1,0 +1,45 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<policyComments xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/CommentDefinitions">
+  <policyNamespaces>
+    <using prefix="ns0" namespace="Microsoft.Policies.ControlAltDelete"></using>
+    <using prefix="ns1" namespace="Microsoft.Policies.ControlPanel"></using>
+    <using prefix="ns2" namespace="Microsoft.Policies.StartMenu"></using>
+    <using prefix="ns3" namespace="Microsoft.Policies.WindowsExplorer"></using>
+  </policyNamespaces>
+  <comments>
+    <admTemplate>
+      <comment policyRef="ns0:DisableChangePassword" commentText="$(resource.ns0_DisableChangePassword)"></comment>
+      <comment policyRef="ns0:DisableLockComputer" commentText="$(resource.ns0_DisableLockComputer)"></comment>
+      <comment policyRef="ns0:DisableTaskMgr" commentText="$(resource.ns0_DisableTaskMgr)"></comment>
+      <comment policyRef="ns0:NoLogoff" commentText="$(resource.ns0_NoLogoff)"></comment>
+      <comment policyRef="ns1:DisallowCpls" commentText="$(resource.ns1_DisallowCpls)"></comment>
+      <comment policyRef="ns1:ForceClassicControlPanel" commentText="$(resource.ns1_ForceClassicControlPanel)"></comment>
+      <comment policyRef="ns2:NoGamesFolderOnStartMenu" commentText="$(resource.ns2_NoGamesFolderOnStartMenu)"></comment>
+      <comment policyRef="ns2:NoStartMenuHomegroup" commentText="$(resource.ns2_NoStartMenuHomegroup)"></comment>
+      <comment policyRef="ns2:NoStartMenuRecordedTV" commentText="$(resource.ns2_NoStartMenuRecordedTV)"></comment>
+      <comment policyRef="ns3:DisableKnownFolders" commentText="$(resource.ns3_DisableKnownFolders)"></comment>
+    </admTemplate>
+  </comments>
+  <resources minRequiredRevision="1.0">
+    <stringTable>
+      <string id="ns0_DisableChangePassword">Locking option to overwrite any registry key hijacking by ransomware.</string>
+      <string id="ns0_DisableLockComputer">Locking option to overwrite any registry key hijacking by ransomware.</string>
+      <string id="ns0_DisableTaskMgr">Locking option to overwrite any registry key hijacking by ransomware.</string>
+      <string id="ns0_NoLogoff">Locking option to overwrite any registry key hijacking by ransomware.</string>
+      <string id="ns1_DisallowCpls">Remove distraction entries in Control Panel.
+
+https://docs.microsoft.com/en-us/windows/desktop/shell/controlpanel-canonical-names</string>
+      <string id="ns1_ForceClassicControlPanel">Open Control Panel in Grid view instead of Category view.</string>
+      <string id="ns2_NoGamesFolderOnStartMenu">Remove Start Menu junk from Windows 7.</string>
+      <string id="ns2_NoStartMenuHomegroup">Remove Start Menu junk from Windows 7.</string>
+      <string id="ns2_NoStartMenuRecordedTV">Remove Start Menu junk from Windows 7.</string>
+      <string id="ns3_DisableKnownFolders">FOLDERID_Games {CAC52C1A-B53D-4edc-92D7-6B2E8AC19434}
+FOLDERID_GameTasks {054FAE61-4DD8-4787-80B6-090220C4B700}
+FOLDERID_Objects3D {31C0DD25-9439-4F12-BF41-7FF4EDA38722}
+FOLDERID_PublicGameTasks {DEBF2536-E1A8-4c59-B6A2-414586476AEA}
+FOLDERID_SavedGames {4C5C32FF-BB9D-43b0-B5B4-2D72E54EAAA4}
+
+https://docs.microsoft.com/en-us/windows/desktop/shell/knownfolderid</string>
+    </stringTable>
+  </resources>
+</policyComments>
