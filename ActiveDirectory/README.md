@@ -10,8 +10,8 @@
 == Domain OU layout ===
 ````
 FOREST ROOT
-\ Domain Controllers
---\ Pilot controllers
+
+\ Corp Groups
 
 \ Corp Users
 --\ Service
@@ -20,19 +20,24 @@ FOREST ROOT
 ----\ Tier2
 --\ Shared Mailbox
 --\ Employee
-----\ Test users
-----\ Pilot users
+----\ Site1
+-------\ Test Users
+--\ Privileged
 
 \ Corp Workstations
---\ Workstation
-----\ Test workstations
-----\ Pilot workstations
+--\ Workstations
+----\ Site1
+-------\ Test Workstations
+----\ Training Lab
 --\ PAW
 ----\ Tier0
 ----\ Tier1
 ----\ Tier2
 
-\ Corp Servers
+\ Domain Controllers
+--\ Pilot controllers
+
+\ Servers
 --\ Tier0
 --\ Tier1
 --\ Tier2
