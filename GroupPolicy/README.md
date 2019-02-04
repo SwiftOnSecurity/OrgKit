@@ -31,91 +31,92 @@ Most policy comments will include a unique identifier called 'OrgKitID'. This al
 ## Policies
 Note: This is a roadmap vision and does not list the GPOs currently available.
 
-### POLICY-Domain
-A limited set of domain-wide settings which are required for all machines. Things such as enabling a minimum protocol negotiation level.
+### Client-Auditing
 
-### POLICY-DomainControllers
-Domain Controllers security settings and configuration for communicating with clients.
+### Client-Browser-Chrome
+Settings for Chrome and Firefox.
 
-### POLICY-DomainControllers-Pilot
-Domain Controllers policy which will be applied to a subset of domain controllers first, for incremental testing.
+### Client-Browser-Edge
+Settings for Edge.
 
-### POLICY-DomainControllers-Auditing
-Directory Controller-specific Active Directory, system integrity auditing settings, and log forwarding, which are much more stringent than on a normal server or client PC.
+### Client-Browser-IE
+Settings for Internet Explorer.
 
-### POLICY-Client-Auditing
-Applied to the Domain Computers OU to configure audit settings and log forwarding.
+### Client-Browser-Firefox
+Settings for Firefox.
 
-### POLICY-Client-Computer
-Applied to the Domain Computers OU, does not include user-level policies.
-
-### POLICY-Client-Computer-Security
-Applied to the Domain Computers OU, does not include user-level policies.
-
-### POLICY-Client-User
-Applied to the Domain Users OU, does not include computer-level policies.
-
-### POLICY-Client-User-Security
-Applied to the Domain Users OU, does not include computer-level policies.
-
-### POLICY-Client-EngineerQFE
-Applied to the 'Domain Users' and 'Domain Computer' OU. Allows designated Helpdesk Engineers to add new "quick-fix engineering" changes to Group Policy, without having the power to edit the primary policies, which have final engineering control by Windows System Engineers.
-
-### POLICY-Client-Maintenance
-Settings which configure maintenance tasks and run periodic tasks on client machines to maintain them.
-
-### POLICY-Client-Office
-User experience settings for Office.
-
-### POLICY-Client-Office-Security
-Security settings for Office.
-
-### POLICY-Client-AntivirusDefender
+### Client-Antivirus-Defender
 Settings for Windows Defender on the client. This should not be disabled, even if a different antivirus is installed. If needed, Defender will be automatically disabled on the systems. Defender should never be administratively disabled.
 
 OrgKitGpoId: f77e39ce-afae-4705-b2f6-43b15ab8ad86
 
-### POLICY-Client-Security-Audit
+### Client-Experience-Computer
+
+### Client-Experience-User
+
+### Client-MicrosoftOffice
+User experience settings for Office.
+
+### Client-MicrosoftOffice-Security
+Security settings for Office.
+
+### Client-Security-Auditing
 Windows audit security settings.
 
-### POLICY-Client-WSUS
+### Client-Security-Computer
 
-### POLICY-Browser-EdgeIE
-Settings for Edge and Internet Explorer.
+### Client-Security-User
 
-### POLICY-Browser-ChromeFirefox
-Settings for Chrome and Firefox.
+### Client-EngineerQFE
+Applied to the 'Domain Users' and 'Domain Computer' OU. Allows designated Helpdesk Engineers to add new "quick-fix engineering" changes to Group Policy, without having the power to edit the primary policies, which have final engineering control by Windows System Engineers.
 
-### POLICY-Server-Experience
+### Client-Maintenance
+Settings which configure maintenance tasks and run periodic tasks on client machines to maintain them.
 
-### POLICY-Server-Maintenance
+### Domain
+A limited set of domain-wide settings which are required for all machines. Things such as enabling a minimum protocol negotiation level.
 
-### POLICY-Server-AntivirusDefender
+### DomainControllers
+Domain Controllers security settings and configuration for communicating with clients.
+
+### DomainControllers-Pilot
+Domain Controllers policy which will be applied to a subset of domain controllers first, for incremental testing.
+
+### DomainControllers-Auditing
+Directory Controller-specific Active Directory, system integrity auditing settings, and log forwarding, which are much more stringent than on a normal server or client PC.
+
+### Client-WSUS
+
+### Server-Experience
+
+### Server-Maintenance
+
+### Server-Antivirus-Defender
 Servers may need specialized antivirus settings due to performance concerns and troubleshooting, so this policy is separated out.
 
-### POLICY-Server-Audit
+### Server-Security-Audit
 
-### POLICY-Server-Security
+### Server-Security
 
-### POLICY-Server-Security-Tier0
+### Server-Security-Tier0
 
-### POLICY-Server-Security-Tier1
+### Server-Security-Tier1
 
-### POLICY-Server-Security-Tier2
+### Server-Security-Tier2
 
-### POLICY-Server-WSUS
+### Server-WSUS
 
-### POLICY-Pilot-Server
+### Pilot-Server
 
-### POLICY-Pilot-Client
+### Pilot-Client
 
-### POLICY-PAW-Tier0
+### PAW-Tier0
 
-### POLICY-PAW-Tier1
+### PAW-Tier1
 
-### POLICY-PAW-Tier2
+### PAW-Tier2
 
-### POLICY-LAPS
+### LAPS
 Controls 'Microsoft Local Administrator Password Solution' deployed to client machines
 https://technet.microsoft.com/en-us/mt227395.aspx
 https://www.starwindsoftware.com/blog/deploying-microsoft-laps
