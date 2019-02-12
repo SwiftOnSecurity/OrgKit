@@ -56,18 +56,16 @@ Most policy comments will include a unique identifier called 'OrgKitID'. This al
 ## Policies - OrgKit
 Note: This is a roadmap vision and does not list the GPOs currently available.
 
-### Client-Auditing
-
-### Client-Browser-Chrome
+### Browser-Chrome
 Settings for Chrome and Firefox.
 
-### Client-Browser-Edge
+### Browser-Edge
 Settings for Edge.
 
-### Client-Browser-IE
+### Browser-IE
 Settings for Internet Explorer.
 
-### Client-Browser-Firefox
+### Browser-Firefox
 Settings for Firefox.
 
 ### Client-Antivirus-Defender
