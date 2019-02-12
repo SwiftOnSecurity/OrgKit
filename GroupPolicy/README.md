@@ -28,7 +28,21 @@ With the (general) separation of User and Computer policies, this design leaves 
 
 Most policy comments will include a unique identifier called 'OrgKitID'. This allows you to quickly identify a policy and its current recommended status via web search.
 
-## Policies
+## Policies - MSFT Baseline
+
+###MSFT1809-Bitlocker
+###MSFT1809-Defender
+###MSFT1809-Desktop-Security
+###MSFT1809-IE11-Machine
+###MSFT1809-IE11-User
+###MSFT1809-User
+###MSFT2016-Office-Computer
+###MSFT2016-Office-User
+###MSFT2019-CredentialGuard
+###MSFT2019-Domain Controllers
+###MSFT2019-Servers
+
+## Policies - OrgKit
 Note: This is a roadmap vision and does not list the GPOs currently available.
 
 ### Client-Auditing
