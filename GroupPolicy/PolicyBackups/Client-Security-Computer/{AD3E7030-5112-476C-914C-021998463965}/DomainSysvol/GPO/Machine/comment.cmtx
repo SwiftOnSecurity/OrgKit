@@ -1,0 +1,26 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<policyComments xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/CommentDefinitions">
+  <policyNamespaces>
+    <using prefix="ns0" namespace="Microsoft.Policies.DNSClient"></using>
+    <using prefix="ns1" namespace="Microsoft.Policies.SecGuide"></using>
+  </policyNamespaces>
+  <comments>
+    <admTemplate>
+      <comment policyRef="ns0:Turn_Off_Multicast" commentText="$(resource.ns0_Turn_Off_Multicast)"></comment>
+      <comment policyRef="ns1:Pol_SecGuide_0003_SMBv1_ClientLMWkstaDepends" commentText="$(resource.ns1_Pol_SecGuide_0003_SMBv1_ClientLMWkstaDepends)"></comment>
+      <comment policyRef="ns1:Pol_SecGuide_0203_LsassAudit" commentText="$(resource.ns1_Pol_SecGuide_0203_LsassAudit)"></comment>
+      <comment policyRef="ns1:Pol_SecGuide_0204_LsassRunAsPPL" commentText="$(resource.ns1_Pol_SecGuide_0204_LsassRunAsPPL)"></comment>
+      <comment policyRef="ns1:Pol_SecGuide_A001_Block_Flash" commentText="$(resource.ns1_Pol_SecGuide_A001_Block_Flash)"></comment>
+    </admTemplate>
+  </comments>
+  <resources minRequiredRevision="1.0">
+    <stringTable>
+      <string id="ns0_Turn_Off_Multicast">LLMNR allows connecting to computers that are on a local network but not part of a domain. However, this allows other computers to imitate legitimate servers and intercept authentication information. Disabling this is highly encouraged on domain machines.</string>
+      <string id="ns1_Pol_SecGuide_0003_SMBv1_ClientLMWkstaDepends">Disable SMB1 on Win7 and WinXP.</string>
+      <string id="ns1_Pol_SecGuide_0203_LsassAudit">Enable alerting on LSA Protection incompatibility.</string>
+      <string id="ns1_Pol_SecGuide_0204_LsassRunAsPPL">Enable LSA Protection to make password dumping more difficult. This may conflict with aging enterprise credential mangement systems. Normally these will not be seen in a new enterprise.</string>
+      <string id="ns1_Pol_SecGuide_A001_Block_Flash">Legitimatelly calling Flash from within Office documents is normally only seen in aging PowerPoint presentations with old videos inside. Most new organizations should not have this requirement.
+Putting Flash in Office documents is a moderately common 0day infection vector.</string>
+    </stringTable>
+  </resources>
+</policyComments>
