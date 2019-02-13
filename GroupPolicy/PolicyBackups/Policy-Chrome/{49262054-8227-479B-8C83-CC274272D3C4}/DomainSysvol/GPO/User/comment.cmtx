@@ -1,0 +1,53 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<policyComments xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/CommentDefinitions">
+  <policyNamespaces>
+    <using prefix="ns0" namespace="Google.Policies.Chrome"></using>
+  </policyNamespaces>
+  <comments>
+    <admTemplate>
+      <comment policyRef="ns0:ExtensionInstallBlacklist" commentText="$(resource.ns0_ExtensionInstallBlacklist)"></comment>
+      <comment policyRef="ns0:ExtensionInstallForcelist" commentText="$(resource.ns0_ExtensionInstallForcelist)"></comment>
+      <comment policyRef="ns0:ExtensionInstallWhitelist" commentText="$(resource.ns0_ExtensionInstallWhitelist)"></comment>
+      <comment policyRef="ns0:ExtensionSettings" commentText="$(resource.ns0_ExtensionSettings)"></comment>
+      <comment policyRef="ns0:ForceGoogleSafeSearch" commentText="$(resource.ns0_ForceGoogleSafeSearch)"></comment>
+      <comment policyRef="ns0:ManagedBookmarks" commentText="$(resource.ns0_ManagedBookmarks)"></comment>
+      <comment policyRef="ns0:PromotionalTabsEnabled" commentText="$(resource.ns0_PromotionalTabsEnabled)"></comment>
+      <comment policyRef="ns0:RemoteAccessHostAllowClientPairing" commentText="$(resource.ns0_RemoteAccessHostAllowClientPairing)"></comment>
+      <comment policyRef="ns0:RemoteAccessHostClientDomainList" commentText="$(resource.ns0_RemoteAccessHostClientDomainList)"></comment>
+      <comment policyRef="ns0:RemoteAccessHostDomainList" commentText="$(resource.ns0_RemoteAccessHostDomainList)"></comment>
+      <comment policyRef="ns0:RemoteAccessHostRequireCurtain" commentText="$(resource.ns0_RemoteAccessHostRequireCurtain)"></comment>
+      <comment policyRef="ns0:RemoteAccessHostTalkGadgetPrefix" commentText="$(resource.ns0_RemoteAccessHostTalkGadgetPrefix)"></comment>
+      <comment policyRef="ns0:RemoteAccessHostTokenUrl" commentText="$(resource.ns0_RemoteAccessHostTokenUrl)"></comment>
+      <comment policyRef="ns0:RemoteAccessHostTokenValidationUrl" commentText="$(resource.ns0_RemoteAccessHostTokenValidationUrl)"></comment>
+      <comment policyRef="ns0:ThirdPartyBlockingEnabled" commentText="$(resource.ns0_ThirdPartyBlockingEnabled)"></comment>
+      <comment policyRef="ns0:WelcomePageOnOSUpgradeEnabled" commentText="$(resource.ns0_WelcomePageOnOSUpgradeEnabled)"></comment>
+    </admTemplate>
+  </comments>
+  <resources minRequiredRevision="1.0">
+    <stringTable>
+      <string id="ns0_ExtensionInstallBlacklist">Disable all Chrome extensions by default except those in the force-install list or whitelist.</string>
+      <string id="ns0_ExtensionInstallForcelist">uBlock Origin cjpalhdlnbpafiamejdnhcphjbkeiagm
+Windows Defender Browser Protection bkbeeeffjjeopflfhgeknacdieedcoml
+Microsoft Secure Sign-in Extension ggjhpefgjjfobnfoldnjipclpcfbgbhl</string>
+      <string id="ns0_ExtensionInstallWhitelist">Lastpass hdokiejnpimakedhajhdlcegeplioahd
+1Password aomjjhallfgjeglblehebfpbcfeobpgk
+LegacyBrowserSupport heildphpnddilhkemkielfhnkaagiabh
+OfficeOnline ndjpnladcallmjemlbaebfadecfhkepb</string>
+      <string id="ns0_ExtensionSettings">Add message to ask user to contact IT if they try to install an extension, so it can be approved.
+https://mythic-byway-180716.appspot.com/</string>
+      <string id="ns0_ForceGoogleSafeSearch">This has nothing to do with computer security.</string>
+      <string id="ns0_ManagedBookmarks">http://www.chromium.org/administrators/complex-policies-on-windows
+http://www.chromium.org/administrators/policy-list-3#ManagedBookmarks</string>
+      <string id="ns0_PromotionalTabsEnabled">Do not advertise Chrome to users</string>
+      <string id="ns0_RemoteAccessHostAllowClientPairing">Defense-in-depth do not allow silent remote access through Chrome</string>
+      <string id="ns0_RemoteAccessHostClientDomainList">Disable remote access by mandating example.org</string>
+      <string id="ns0_RemoteAccessHostDomainList">Disable remote access by mandating example.org</string>
+      <string id="ns0_RemoteAccessHostRequireCurtain">Defense-in-depth prevention of remote computer takeover.</string>
+      <string id="ns0_RemoteAccessHostTalkGadgetPrefix">Disable remote access by mandating example.org</string>
+      <string id="ns0_RemoteAccessHostTokenUrl">Disable remote access by mandating example.org</string>
+      <string id="ns0_RemoteAccessHostTokenValidationUrl">Disable remote access by mandating example.org</string>
+      <string id="ns0_ThirdPartyBlockingEnabled">Ensure maximum protection for Chrome browser from software hijacking.</string>
+      <string id="ns0_WelcomePageOnOSUpgradeEnabled">Do not interrupt user flow.</string>
+    </stringTable>
+  </resources>
+</policyComments>
