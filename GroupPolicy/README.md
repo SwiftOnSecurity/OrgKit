@@ -57,7 +57,7 @@ Most policy comments will include a unique identifier called 'OrgKitID'. This al
 Note: This is a roadmap vision and does not list the GPOs currently available.
 
 ### Browser-Chrome
-Settings for Chrome and Firefox.
+Settings for Chrome.
 
 ### Browser-Edge
 Settings for Edge.
