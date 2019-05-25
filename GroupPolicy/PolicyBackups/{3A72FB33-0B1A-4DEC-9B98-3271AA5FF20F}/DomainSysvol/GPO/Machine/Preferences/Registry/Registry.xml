@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegistrySettings clsid="{A3CCFC41-DFDB-43a5-8D26-0FE8B954DA51}"><Registry clsid="{9CD4B2F4-923D-47f5-A062-E897DD1DAD50}" name="LogFilePath" status="LogFilePath" image="7" changed="2019-01-18 07:46:58" uid="{B43A47DF-0231-40B7-9494-434462BC386F}" bypassErrors="1"><Properties action="U" displayDecimal="0" default="0" hive="HKEY_LOCAL_MACHINE" key="SYSTEM\CurrentControlSet\services\DNS\Parameters" name="LogFilePath" type="REG_SZ" value="C:\Windows\debug\DNSLogs.log"/></Registry>
+	<Registry clsid="{9CD4B2F4-923D-47f5-A062-E897DD1DAD50}" name="LogFileMaxSize" status="LogFileMaxSize" image="12" changed="2019-01-18 08:01:34" uid="{F085175A-2D92-4C99-80CD-823138EC8C94}" bypassErrors="1"><Properties action="U" displayDecimal="1" default="0" hive="HKEY_LOCAL_MACHINE" key="SYSTEM\CurrentControlSet\Services\DNS\Parameters" name="LogFileMaxSize" type="REG_DWORD" value="05F5E100"/></Registry>
+</RegistrySettings>

@@ -1,0 +1,2 @@
+Machine Name,Policy Target,Subcategory,Subcategory GUID,Inclusion Setting,Exclusion Setting,Setting Value
+,System,Audit Registry,{0cce921e-69ae-11d9-bed3-505054503030},Success and Failure,,3

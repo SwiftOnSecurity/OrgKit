@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Folders clsid="{77CC39E7-3D16-4f8f-AF86-EC0BBEE2C861}"><Folder clsid="{07DA02F5-F9CD-4397-A550-4AE21B6B4BD3}" name="usermode" status="usermode" image="0" changed="2019-03-04 00:13:53" uid="{B078EF2E-87E1-4951-A47F-0554333BC277}" desc="If the usermode folder does not exist under %WINDIR%\debug\ the gpsvc.log file will not be created.&#xA;&#xA;https://blogs.technet.microsoft.com/askds/2015/04/17/a-treatise-on-group-policy-troubleshootingnow-with-gpsvc-log-analysis/" bypassErrors="1"><Properties action="C" path="%windir%\debug\usermode" readOnly="0" archive="1" hidden="0"/><Filters><FilterRunOnce hidden="1" not="0" bool="AND" id="{FBBFED61-195C-49AA-9A5E-388C9930BD73}"/>
+		</Filters></Folder>
+</Folders>
