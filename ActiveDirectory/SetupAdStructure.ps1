@@ -1,171 +1,44 @@
-﻿$CurrentDomain = Get-ADDomain
+$CurrentDomain = Get-ADDomain
 $RootDN = $CurrentDomain.DistinguishedName
 
-function OrgKit-CreateOU
-{
-New-ADOrganizationalUnit -Name $OUName -Path $OUPath -Description $OUDescription
+function OrgKit-CreateOU {
+    param (
+        [string]$OUName,
+        [string]$OUPath,
+        [string]$OUDescription = ""
+    )
+    New-ADOrganizationalUnit -Name $OUName -Path $OUPath -Description $OUDescription
 }
 
-# Corp Groups
-$OUName = "Corp Groups"
-$OUPath = $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
+$OUs = @(
+    @{Name="Corp Groups"; Path=$RootDN},
+    @{Name="Root"; Path="OU=Corp Groups,$RootDN"},
+    @{Name="Corp Users"; Path=$RootDN},
+    @{Name="Service Accounts"; Path="OU=Corp Users,$RootDN"},
+    @{Name="Tier0"; Path="OU=Service Accounts,OU=Corp Users,$RootDN"},
+    @{Name="Tier1"; Path="OU=Service Accounts,OU=Corp Users,$RootDN"},
+    @{Name="Tier2"; Path="OU=Service Accounts,OU=Corp Users,$RootDN"},
+    @{Name="Shared Mailboxes"; Path="OU=Corp Users,$RootDN"},
+    @{Name="Employees"; Path="OU=Corp Users,$RootDN"},
+    @{Name="Site1"; Path="OU=Employees,OU=Corp Users,$RootDN"},
+    @{Name="Test Users"; Path="OU=Site1,OU=Employees,OU=Corp Users,$RootDN"},
+    @{Name="Privileged"; Path="OU=Corp Users,$RootDN"},
+    @{Name="Corp Workstations"; Path=$RootDN},
+    @{Name="Computers"; Path="OU=Corp Workstations,$RootDN"},
+    @{Name="Site1"; Path="OU=Computers,OU=Corp Workstations,$RootDN"},
+    @{Name="Test Computers"; Path="OU=Site1,OU=Computers,OU=Corp Workstations,$RootDN"},
+    @{Name="Training Lab"; Path="OU=Corp Workstations,$RootDN"},
+    @{Name="PAW"; Path="OU=Corp Workstations,$RootDN"},
+    @{Name="Tier0"; Path="OU=PAW,OU=Corp Workstations,$RootDN"},
+    @{Name="Tier1"; Path="OU=PAW,OU=Corp Workstations,$RootDN"},
+    @{Name="Tier2"; Path="OU=PAW,OU=Corp Workstations,$RootDN"},
+    @{Name="Corp Servers"; Path=$RootDN},
+    @{Name="Tier0"; Path="OU=Corp Servers,$RootDN"},
+    @{Name="Tier1"; Path="OU=Corp Servers,$RootDN"},
+    @{Name="Tier2"; Path="OU=Corp Servers,$RootDN"},
+    @{Name="z AD ACLs"; Path=$RootDN}
+)
 
-# Root DNs
-$OUName = "Root"
-$OUPath = "OU=Corp Groups," + $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-#---------
-
-# Corp Users
-$OUName = "Corp Users"
-$OUPath = $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-# Corp Users\Service Accounts
-$OUName = "Service Accounts"
-$OUPath = "OU=Corp Users," + $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-# Corp Users\Service Accounts\Tier0
-$OUName = "Tier0"
-$OUPath = "OU=Service Accts,OU=Corp Users," + $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-# Corp Users\Service Accounts\Tier1
-$OUName = "Tier1"
-$OUPath = "OU=Service Accts,OU=Corp Users," + $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-# Corp Users\Service Accounts\Tier2
-$OUName = "Tier2"
-$OUPath = "OU=Service Accts,OU=Corp Users," + $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-# Corp Users\Shared Mailboxes
-$OUName = "Shared Mailboxes"
-$OUPath = "OU=Corp Users," + $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-# Corp Users\Employees
-$OUName = "Employees"
-$OUPath = "OU=Corp Users," + $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-# Corp Users\Employees\Site1
-$OUName = "Site1"
-$OUPath = "OU=Employees,OU=Corp Users," + $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-# Corp Users\Employees\Site1\Test Users
-$OUName = "Test Users"
-$OUPath = "OU=Site1,OU=Employees,OU=Corp Users," + $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-# Corp Users\Privileged
-$OUName = "Privileged"
-$OUPath = "OU=Corp Users," + $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-#---------
-
-# Corp Workstations
-$OUName = "Corp Workstations"
-$OUPath = $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-# Corp Workstations\Computers
-$OUName = "Computers"
-$OUPath = "OU=Corp Workstations," + $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-# Corp Workstations\Computers\Site1
-$OUName = "Site1"
-$OUPath = "OU=Computers,OU=Corp Workstations," + $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-# Corp Workstations\Computers\Site1\Test Computers
-$OUName = "Test Computers"
-$OUPath = "OU=Site1,OU=Computers,OU=Corp Workstations," + $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-# Corp Workstations\Training Lab
-$OUName = "Training Lab"
-$OUPath = "OU=Corp Workstations," + $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-# Corp Workstations\PAW
-$OUName = "PAW"
-$OUPath = "OU=Corp Workstations," + $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-# Corp Workstations\PAW\Tier0
-$OUName = "Tier0"
-$OUPath = "OU=PAW,OU=Corp Workstations," + $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-# Corp Workstations\PAW\Tier1
-$OUName = "Tier1"
-$OUPath = "OU=PAW,OU=Corp Workstations," + $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-# Corp Workstations\PAW\Tier2
-$OUName = "Tier2"
-$OUPath = "OU=PAW,OU=Corp Workstations," + $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-#---------
-
-# Corp Servers
-$OUName = "Corp Servers"
-$OUPath = $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-# Corp Servers\Tier0
-$OUName = "Tier0"
-$OUPath = "OU=Corp Servers," + $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-# Corp Servers\Tier1
-$OUName = "Tier1"
-$OUPath = "OU=Corp Servers," + $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-# Corp Servers\Tier2
-$OUName = "Tier2"
-$OUPath = "OU=Corp Servers," + $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
-
-#---------
-
-# z AD ACLs
-$OUName = "z AD ACLs"
-$OUPath = $RootDN
-$OUDescription = ""
-OrgKit-CreateOU
+foreach ($ou in $OUs) {
+    OrgKit-CreateOU -OUName $ou.Name -OUPath $ou.Path
+}
